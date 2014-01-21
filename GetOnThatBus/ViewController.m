@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
+#import "BusAnnotation.h"
+#import "MapDetailViewController.h"
 
 @interface ViewController () <MKMapViewDelegate>
 {
@@ -37,22 +39,17 @@
              NSString *latitude = busStop[@"location"][@"latitude"];
              
              CLLocationCoordinate2D location = CLLocationCoordinate2DMake(latitude.doubleValue, longitude.doubleValue);
-             
-         
-             MKPointAnnotation *annotation = [MKPointAnnotation new];
+            
+             BusAnnotation *annotation = [BusAnnotation new];
              annotation.title = busStop[@"cta_stop_name"];
+             annotation.subtitle = busStop[@"routes"];
              annotation.coordinate = location;
+             annotation.transfers = busStop[@"inter_modal"];
+             annotation.clLocation = [[CLLocation alloc] initWithLatitude:latitude.doubleValue longitude:longitude.doubleValue];
+             
              [myMapView addAnnotation:annotation];
-         
          }
-         
      }];
-    
-    
-    
-    
-  
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -85,7 +82,19 @@
     return annotationView;
 }
 
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    [self performSegueWithIdentifier:@"DetailSegue" sender:view];
+    
+    
+}
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(MKAnnotationView *)sender
+{
+    MapDetailViewController *vc = segue.destinationViewController;
+    BusAnnotation *busAnnotation = sender.annotation;
+    vc.busAnnotation = busAnnotation;
+    
+}
 
 @end

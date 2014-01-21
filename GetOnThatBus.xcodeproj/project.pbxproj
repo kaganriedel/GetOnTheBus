@@ -22,6 +22,8 @@
 		6DF0077B188F02D0007C3C9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DF00779188F02D0007C3C9D /* InfoPlist.strings */; };
 		6DF0077D188F02D0007C3C9D /* GetOnThatBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0077C188F02D0007C3C9D /* GetOnThatBusTests.m */; };
 		6DF00787188F0452007C3C9D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF00786188F0452007C3C9D /* MapKit.framework */; };
+		6DF0078A188F195A007C3C9D /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF00789188F195A007C3C9D /* MapDetailViewController.m */; };
+		6DF0078D188F1B7C007C3C9D /* BusAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0078C188F1B7C007C3C9D /* BusAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		6DF0077A188F02D0007C3C9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6DF0077C188F02D0007C3C9D /* GetOnThatBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOnThatBusTests.m; sourceTree = "<group>"; };
 		6DF00786188F0452007C3C9D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6DF00788188F195A007C3C9D /* MapDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailViewController.h; sourceTree = "<group>"; };
+		6DF00789188F195A007C3C9D /* MapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailViewController.m; sourceTree = "<group>"; };
+		6DF0078B188F1B7C007C3C9D /* BusAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusAnnotation.h; sourceTree = "<group>"; };
+		6DF0078C188F1B7C007C3C9D /* BusAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,10 @@
 				6DF00761188F02D0007C3C9D /* AppDelegate.m */,
 				6DF00766188F02D0007C3C9D /* ViewController.h */,
 				6DF00767188F02D0007C3C9D /* ViewController.m */,
+				6DF00788188F195A007C3C9D /* MapDetailViewController.h */,
+				6DF00789188F195A007C3C9D /* MapDetailViewController.m */,
+				6DF0078B188F1B7C007C3C9D /* BusAnnotation.h */,
+				6DF0078C188F1B7C007C3C9D /* BusAnnotation.m */,
 				6DF00769188F02D0007C3C9D /* Images.xcassets */,
 				6DF00758188F02D0007C3C9D /* Supporting Files */,
 			);
@@ -253,9 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF0078A188F195A007C3C9D /* MapDetailViewController.m in Sources */,
 				6DF00768188F02D0007C3C9D /* ViewController.m in Sources */,
 				6DF00762188F02D0007C3C9D /* AppDelegate.m in Sources */,
 				6DF0075E188F02D0007C3C9D /* main.m in Sources */,
+				6DF0078D188F1B7C007C3C9D /* BusAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
