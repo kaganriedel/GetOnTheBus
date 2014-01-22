@@ -24,6 +24,8 @@
 		6DF00787188F0452007C3C9D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF00786188F0452007C3C9D /* MapKit.framework */; };
 		6DF0078A188F195A007C3C9D /* MapDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF00789188F195A007C3C9D /* MapDetailViewController.m */; };
 		6DF0078D188F1B7C007C3C9D /* BusAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0078C188F1B7C007C3C9D /* BusAnnotation.m */; };
+		6DF00796188F438B007C3C9D /* Pace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF00795188F438B007C3C9D /* Pace.png */; };
+		6DF00798188F43B8007C3C9D /* Metra.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6DF00797188F43B8007C3C9D /* Metra.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		6DF00789188F195A007C3C9D /* MapDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailViewController.m; sourceTree = "<group>"; };
 		6DF0078B188F1B7C007C3C9D /* BusAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusAnnotation.h; sourceTree = "<group>"; };
 		6DF0078C188F1B7C007C3C9D /* BusAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusAnnotation.m; sourceTree = "<group>"; };
+		6DF00795188F438B007C3C9D /* Pace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pace.png; sourceTree = "<group>"; };
+		6DF00797188F43B8007C3C9D /* Metra.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Metra.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 				6DF0078B188F1B7C007C3C9D /* BusAnnotation.h */,
 				6DF0078C188F1B7C007C3C9D /* BusAnnotation.m */,
 				6DF00769188F02D0007C3C9D /* Images.xcassets */,
+				6DF00792188F415D007C3C9D /* Images */,
 				6DF00758188F02D0007C3C9D /* Supporting Files */,
 			);
 			path = GetOnThatBus;
@@ -164,6 +169,15 @@
 				6DF00779188F02D0007C3C9D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DF00792188F415D007C3C9D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6DF00797188F43B8007C3C9D /* Metra.gif */,
+				6DF00795188F438B007C3C9D /* Pace.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DF0076A188F02D0007C3C9D /* Images.xcassets in Resources */,
+				6DF00798188F43B8007C3C9D /* Metra.gif in Resources */,
 				6DF0075C188F02D0007C3C9D /* InfoPlist.strings in Resources */,
+				6DF00796188F438B007C3C9D /* Pace.png in Resources */,
 				6DF00765188F02D0007C3C9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

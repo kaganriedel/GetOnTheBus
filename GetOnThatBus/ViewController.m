@@ -30,8 +30,6 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
      {
          busStops = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&connectionError][@"row"];
-         NSLog(@"%i", busStops.count);
-         
          
          for (NSDictionary *busStop in busStops)
          {
@@ -62,12 +60,8 @@
     [myMapView setRegion:region animated:YES];
 }
 
--(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(BusAnnotation*)annotation
 {
-    if(annotation == mapView.userLocation)
-    {
-        return nil;
-    }
     MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"MapAnnotation"];
     if(annotationView == nil)
     {
@@ -78,6 +72,13 @@
     }
     annotationView.canShowCallout = YES;
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    if ([annotation.transfers isEqualToString:@"Metra"])
+    {
+        annotationView.image = [UIImage imageNamed:@"Metra.gif"];
+    } else if ([annotation.transfers isEqualToString:@"Pace"])
+    {
+        annotationView.image = [UIImage imageNamed:@"Pace.png"];
+    }
     
     return annotationView;
 }
@@ -85,8 +86,6 @@
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     [self performSegueWithIdentifier:@"DetailSegue" sender:view];
-    
-    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(MKAnnotationView *)sender
@@ -94,7 +93,6 @@
     MapDetailViewController *vc = segue.destinationViewController;
     BusAnnotation *busAnnotation = sender.annotation;
     vc.busAnnotation = busAnnotation;
-    
 }
 
 @end
